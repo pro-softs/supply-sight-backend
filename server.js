@@ -21,9 +21,9 @@ let products = [
 
 // Helper function to calculate status
 const getStatus = (stock, demand) => {
-  if (stock > demand) return "Healthy";
-  if (stock === demand) return "Low";
-  return "Critical";
+  if (stock > demand) return "healthy";
+  if (stock === demand) return "low";
+  return "critical";
 };
 
 // Helper function to get warehouse by id
