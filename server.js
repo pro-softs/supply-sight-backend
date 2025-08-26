@@ -116,10 +116,10 @@ const resolvers = {
         filtered = filtered.filter(p => p.status === status);
       }
 
-      console.log('stat', status, filtered);
+      const offset = page * limit;  // if page is 0-based
 
       const total = filtered.length;
-      const items = filtered.slice(page, page + limit);
+      const items = filtered.slice(offset, offset + limit);
 
       return {
         items,
