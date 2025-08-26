@@ -112,6 +112,7 @@ const resolvers = {
         filtered = filtered.filter(p => p.warehouseId === warehouseId);
       }
 
+      console.log('stat', status, filtered);
       if (status) {
         filtered = filtered.filter(p => p.status === status);
       }
