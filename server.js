@@ -112,10 +112,11 @@ const resolvers = {
         filtered = filtered.filter(p => p.warehouseId === warehouseId);
       }
 
-      console.log('stat', status, filtered);
       if (status) {
         filtered = filtered.filter(p => p.status === status);
       }
+
+      console.log('stat', status, filtered);
 
       const total = filtered.length;
       const items = filtered.slice(page, page + limit);
